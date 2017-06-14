@@ -13,7 +13,7 @@ public class GameLogic {
         messages = new Messages();
     }
     public Moves generateComputerMove() {
-        int randomNum = ThreadLocalRandom.current().nextInt(0, 9);
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 8);
         if(randomNum < 3) {
             return Moves.ROCK;
         } else if(randomNum < 6) {
