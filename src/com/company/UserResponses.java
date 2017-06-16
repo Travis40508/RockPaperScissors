@@ -11,24 +11,26 @@ public class UserResponses {
     private boolean validMove = false;
     private HomeView view;
 
-    public UserResponses (HomeView view) {
+    public UserResponses(HomeView view) {
         this.view = view;
         messages = new Messages();
     }
 
-    /**Queries the user for their move and makes sure it's a valid response before moving on. */
+    /**
+     * Queries the user for their move and makes sure it's a valid response before moving on.
+     */
     public Moves getChosenMove() {
         validMove = false;
-        while(!validMove) {
+        while (!validMove) {
             String move = scanner.next();
             switch (move.toLowerCase()) {
-                case "rock" :
+                case "rock":
                     validMove = true;
                     return Moves.ROCK;
-                case "paper" :
+                case "paper":
                     validMove = true;
                     return Moves.PAPER;
-                case "scissors" :
+                case "scissors":
                     validMove = true;
                     return Moves.SCISSORS;
                 default:
@@ -42,17 +44,20 @@ public class UserResponses {
 
     public void getInterfaceSelection() {
         boolean isValidResponse = false;
-        while(!isValidResponse) {
-        String response = scanner.next();
+        while (!isValidResponse) {
+            String response = scanner.next();
             switch (response) {
-                case "1" :
+                case "1":
                     isValidResponse = true;
                     view.gameSelected();
                     break;
-                case "2" :
+                case "2":
                     isValidResponse = true;
                     view.statisticsSelected();
                     break;
+                case "3":
+                    isValidResponse = true;
+                    view.exitApplicationSelected();
                 default:
                     messages.invalidResponse();
                     break;

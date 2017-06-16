@@ -4,7 +4,9 @@ package com.company;
  * Created by rodneytressler on 6/14/17.
  */
 public class Messages {
-    /**This should all be self-explanatory. */
+    /**
+     * This should all be self-explanatory.
+     */
 
 
     public void GreetUser() {
@@ -16,7 +18,7 @@ public class Messages {
     }
 
     public String gameTie(String move) {
-        return("You picked " + move + " and the computer picked " + move + ". Tie game!");
+        return ("You picked " + move + " and the computer picked " + move + ". Tie game!");
     }
 
     public String computerWins(String playerMove, String computerMove) {
@@ -30,7 +32,8 @@ public class Messages {
     public void querySelection() {
         System.out.println("Please select a valid option: \n" +
                 "1. Play Game \n" +
-                "2. View Statistics");
+                "2. View Statistics \n" +
+                "3. Exit Application");
     }
 
     public void invalidResponse() {
@@ -42,14 +45,18 @@ public class Messages {
     }
 
     public void showGamesWon(int gamesWon) {
-        System.out.println("You have won a total of " + gamesWon + " games.");
+        System.out.println("You have won a total of " + gamesWon + " game(s).");
     }
 
     public void showGamesLost(int gamesLost) {
-        System.out.println("You have lost a total of " + gamesLost + " games.");
+        System.out.println("You have lost a total of " + gamesLost + " game(s).");
     }
 
     public void showGamesDrawn(int gamesDrawn) {
-        System.out.println("You have drawn a total of " + gamesDrawn + " games");
+        System.out.println("You have drawn a total of " + gamesDrawn + " game(s)");
+    }
+
+    public void showGamesPlayed(int gamesPlayed) {
+        System.out.println("You have played a total of " + gamesPlayed + " game(s).");
     }
 }

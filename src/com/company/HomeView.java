@@ -7,4 +7,6 @@ public interface HomeView {
     void gameSelected();
 
     void statisticsSelected();
+
+    void exitApplicationSelected();
 }
