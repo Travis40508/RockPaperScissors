@@ -26,4 +26,30 @@ public class Messages {
     public String playerWins(String playerMove, String computerMove) {
         return ("You picked " + playerMove + " and the computer picked " + computerMove + ". You Win!");
     }
+
+    public void querySelection() {
+        System.out.println("Please select a valid option: \n" +
+                "1. Play Game \n" +
+                "2. View Statistics");
+    }
+
+    public void invalidResponse() {
+        System.out.println("Invalid move, please try again");
+    }
+
+    public void showWinPercentage(int percent) {
+        System.out.println("You have won " + percent + "% of your games.");
+    }
+
+    public void showGamesWon(int gamesWon) {
+        System.out.println("You have won a total of " + gamesWon + " games.");
+    }
+
+    public void showGamesLost(int gamesLost) {
+        System.out.println("You have lost a total of " + gamesLost + " games.");
+    }
+
+    public void showGamesDrawn(int gamesDrawn) {
+        System.out.println("You have drawn a total of " + gamesDrawn + " games");
+    }
 }
